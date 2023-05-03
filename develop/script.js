@@ -10,56 +10,77 @@ var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
 //Declaration variables
-var plength
-var yesLowercase
-var yesUppercase
-var yesNumeric
-var yesSpecialchars
-var newLength
-var choices
+var plength;
+var yesLowercase;
+var yesUppercase;
+var yesNumeric;
+var yesSpecialchars;
+var newLength;
+var choices = [];
 
 function getPasswordOptions() {
-//1. prompt user for password criteria
-var plength = (prompt("Choose a password length between 8 and 128 chracters."));
-//  a. password length 8 < 128
-if (!plength <= 8 && !plength >= 128) {
-  alert("Password must be bewtween 8 and 128 characters.\nPlease try Again.")
-} else {
-  newLength = alert("Your password will be " + plength + " characters long.");
-}
-//  b. lowercase, uppercase, numbers, special characters
-var yesLowercase = (confirm("Click OK to include lowercase letters in your password"));
-var yesUppercase = (confirm("Click OK to include uppercase letters in your password"));
-var yesNumeric = (confirm("Click OK to include numbers in your password."));
-var yesSpecialchars = (confirm("Click OK to include special characters in your password"));
+  //1. prompt user for password criteria
+  plength = (prompt("Choose a password length between 8 and 128 chracters."));
+  //  a. password length 8 < 128
+  while (plength < 8 || plength > 128) {
+    alert("Password must be bewtween 8 and 128 characters.\nPlease try Again.")
+    plength = (prompt("Choose a password length between 8 and 128 chracters."));
+  }
+  alert("Your password will be " + plength + " characters long.");
+  //  b. User chooses lowercase, uppercase, numbers, or special characters
+  yesLowercase = (confirm("Click OK to include lowercase letters in your password"));
+  yesUppercase = (confirm("Click OK to include uppercase letters in your password"));
+  yesNumeric = (confirm("Click OK to include numbers in your password."));
+  yesSpecialchars = (confirm("Click OK to include special characters in your password"));
 
-var allChoices = [yesLowercase, yesUppercase, yesNumeric, yesSpecialchars];
-//2. Validate the input by 1 criteria
-if (allChoices === false) {
-  alert("Password must contain at least one character type must be included.")
-} 
+  //2. Validate the input has at least 1 criteria
+  while (!yesLowercase && !yesUppercase && !yesNumeric && !yesSpecialchars) {
+    alert("Password must contain at least one character type.")
+    yesLowercase = (confirm("Click OK to include lowercase letters in your password"));
+    yesUppercase = (confirm("Click OK to include uppercase letters in your password"));
+    yesNumeric = (confirm("Click OK to include numbers in your password."));
+    yesSpecialchars = (confirm("Click OK to include special characters in your password"));
+  }
 }
-
-function getRandom () {
-  //3. Generate password
-  var x = Math.random() * 9;
-  console.log(x); 
-} 
+function getRandom() {
+  if (yesLowercase) {
+    choices = choices.concat(lowercase);
+  }
+  if (yesUppercase) {
+    choices = choices.concat(uppercase);
+  }
+  if (yesNumeric) {
+    choices = choices.concat(numeric);
+  }
+  if (yesSpecialchars) {
+    choices = choices.concat(specialChars);
+  }
+}
+//create generatePassword function
 function generatePassword() {
-    //4. Diplay password to the box on the page
+  getPasswordOptions();
+  getRandom();
+  var ranPassword = "";
+  for (var i = 0; i < plength; i++) {
+    //this is the random index
+    var index = Math.floor(Math.random() * choices.length);
+    //combines together 
+    ranPassword += choices[index];
   }
+  console.log(ranPassword);
+  return ranPassword;
+  //4. Diplay password to the box on the page
+}
 
-  // Write password to the #password input
-  //create generatePassword function
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-    //displays password on screen
-    passwordText.value = password;
-  }
+// Write password to the #password input
 
-  // Add event listener to generate button
-  //calls function
-  generateBtn.addEventListener("click", writePassword);
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  //displays password on screen
+  passwordText.value = password;
+}
 
-
+// Add event listener to generate button
+//calls function
+generateBtn.addEventListener("click", writePassword);
