@@ -15,12 +15,19 @@ Use this function to create a random password with various criteria.
 
 Follow this link to see the final website. 
 
+Below are screenshots:
+Click Generate Password to start the application. 
+![start screen](develop/images/Screen_1.png)
 
---------------
+You will be prompted for the desired length of your password. 
+![user prompt for password length](develop/images/Screen_2.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+Then you will go through and choose the rest of the criteria for your password. 
+![prompts for further password criteria](develop/images/Screen_3.png)
 
-![alt text](assets/images/screenshot.png)
+Finally your password would appear in the box above the Generate Password button. 
+![final password will show up in the box](develop/images/Screen_4.png)
+
 
 ## Credits
 
