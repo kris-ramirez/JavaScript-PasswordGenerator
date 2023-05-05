@@ -38,6 +38,7 @@ https://www.youtube.com/watch?v=x4HUaiazDes
 
 Here are the rest of the websites I used to help create this application. 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+
 https://www.w3schools.com/js/js_loop_for.asp
 
 ## License
