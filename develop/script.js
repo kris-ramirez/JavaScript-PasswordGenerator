@@ -1,7 +1,5 @@
-// Assignment Code
 //code for 'generate'' button in the browser
 var generateBtn = document.querySelector("#generate");
-
 
 //arrays for password criteria 
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -29,10 +27,10 @@ function getPasswordOptions() {
   }
   alert("Your password will be " + plength + " characters long.");
   //User chooses lowercase, uppercase, numbers, or special characters
-  yesLowercase = (confirm("Click OK to include lowercase letters in your password"));
-  yesUppercase = (confirm("Click OK to include uppercase letters in your password"));
-  yesNumeric = (confirm("Click OK to include numbers in your password."));
-  yesSpecialchars = (confirm("Click OK to include special characters in your password"));
+  yesLowercase = confirm("Click OK to include lowercase letters in your password");
+  yesUppercase = confirm("Click OK to include uppercase letters in your password");
+  yesNumeric = confirm("Click OK to include numbers in your password.");
+  yesSpecialchars = confirm("Click OK to include special characters in your password");
 
   //Validate the input has at least 1 criteria
   while (!yesLowercase && !yesUppercase && !yesNumeric && !yesSpecialchars) {
@@ -44,6 +42,9 @@ function getPasswordOptions() {
   }
 }
 function getRandom() {
+  //clears the old user choice(s) if application was already run once
+  choices = [];
+
   if (yesLowercase) {
     choices = choices.concat(lowercase);
   }
@@ -57,7 +58,7 @@ function getRandom() {
     choices = choices.concat(specialChars);
   }
 }
-//create generatePassword function
+
 function generatePassword() {
   getPasswordOptions();
   getRandom();
@@ -73,7 +74,7 @@ function generatePassword() {
   
 }
 
-// Write password to the #password input
+// Write password to the password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
