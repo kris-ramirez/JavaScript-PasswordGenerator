@@ -3,7 +3,7 @@
 
 ## Description
 
-This weeks challenge was to create a random password generator using JavaScript. We were given the HTML and CSS code and a few lines of JavaScript to start. I built this project to showcase the skills we were learning in class to create a dynamic app that is also responsive. This app helps users create random passwords with the criteria they set. I learned about functions, the for loop, and the importance of tutoring in this challenge. I still struggle with some of the concepts around functions in JavaScript, but I am continuing to learn. 
+This weeks challenge was to create a random password generator using JavaScript. We were given the HTML and CSS code and a few lines of JavaScript to start. I built this project to showcase the JavaScript skills we were learning in class to create a dynamic app that is also responsive. This app helps users create random passwords with the criteria they set. I learned about functions, the for loop, and the importance of tutoring in this challenge. I still struggle with some of the concepts around functions in JavaScript, but I am continuing to learn. 
 
 ## Installation
 
@@ -11,7 +11,7 @@ N/A
 
 ## Usage
 
-Use this function to create a random password with various criteria. 
+Use this application to create a random password with various criteria. 
 
 Follow this link to see the final website. 
 
