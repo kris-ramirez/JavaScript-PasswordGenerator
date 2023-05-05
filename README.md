@@ -49,6 +49,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
 https://www.w3schools.com/js/js_loop_for.asp
 
+Further, I was aided in tutoring and office hours. 
+
 ## License
 
 Please refer to the LICENSE in the repo. 
