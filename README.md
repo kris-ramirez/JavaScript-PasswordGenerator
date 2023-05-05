@@ -17,7 +17,7 @@ Follow this link to see the final website.
 
 Below are screenshots:
 Click Generate Password to start the application. 
-[start screen](develop/images/Screen_1.png)
+[start screen](develop/images/Screen _1.png)
 
 You will be prompted for the desired length of your password. 
 [user prompt for password length](develop/Images/Screen_2.png)
