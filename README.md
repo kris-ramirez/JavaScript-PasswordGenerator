@@ -26,7 +26,7 @@ Then you will go through and choose the rest of the criteria for your password.
 [prompts for further password criteria](develop/Images/Screen_3.png)
 
 Finally your password would appear in the box above the Generate Password button. 
-[final password will show up in the box](develop/Images/Screen_4.png)
+[final password](develop/Images/Screen_4.png)
 
 
 ## Credits
@@ -34,11 +34,11 @@ Finally your password would appear in the box above the Generate Password button
 We were given the HTML, CSS, and a few lines of JavaScript for this challenge. 
 
 The following is a link to the turotial I followd on YouTube to get started: 
-(https://www.youtube.com/watch?v=x4HUaiazDes)
+https://www.youtube.com/watch?v=x4HUaiazDes
 
 Here are the rest of the websites I used to help create this application. 
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
-(https://www.w3schools.com/js/js_loop_for.asp)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+https://www.w3schools.com/js/js_loop_for.asp
 
 ## License
 
